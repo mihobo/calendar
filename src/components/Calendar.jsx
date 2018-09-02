@@ -8,7 +8,9 @@ class Calendar extends React.Component {
   };
 
   renderHeader() {
-    const dateFormat = "MMMM YYYY";
+    // const dateFormat = "MMMM YYYY";
+    const month = "MMMM";
+    const year = "YYYY";
 
     return (
       <div className="header row flex-middle">
@@ -18,8 +20,11 @@ class Calendar extends React.Component {
           </div>
         </div>
         <div className="col col-center">
-          <span>
-            {dateFns.format(this.state.currentMonth, dateFormat)}
+          <span className="monthColor">
+            {dateFns.format(this.state.currentMonth, month) + ' '}
+          </span>
+          <span className="yearColor">
+            {dateFns.format(this.state.currentMonth, year)}
           </span>
         </div>
         <div className="col col-end" onClick={this.nextMonth}>

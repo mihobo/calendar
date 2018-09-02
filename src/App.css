@@ -153,8 +153,8 @@ main {
 
 .calendar .days {
   text-transform: uppercase;
-  font-weight: 400;
-  color: var(--text-color-light);
+  font-weight: 900;
+  color: var(--main-color);
   font-size: 70%;
   padding: .75em 0;
   border-bottom: 1px solid var(--border-color);
@@ -229,4 +229,12 @@ main {
   flex-grow: 0;
   flex-basis: calc(100%/7);
   width: calc(100%/7);
+}
+
+.monthColor {
+  color: var(--main-color);
+}
+
+.yearColor {
+  color: orange;
 }
